@@ -1,0 +1,181 @@
+:root {
+  --bg-primary: #111111;
+  --bg-card: #222222;
+  --primary-text: #ffffff;
+  --accent-color: rgb(0, 199, 43);
+  --accent-color2: #00c72b2e;
+  --border-color: #444444;
+  --card-border-color: #444444;
+  --shadow-color: #1c1c1c;
+  --button-bg: var(--accent-color);
+  --button-hover-bg: #a0740a; /* Darker gold for hover */
+  --font-sans: "Arial", sans-serif;
+}
+
+body.light-mode {
+  --bg-primary: #d0f0c4e3;
+  --card-bg: #ffffff;
+  --primary-text: #111111;
+  --border-color: #c1bfbf;
+  --card-border-color: #c1bfbf;
+  --shadow-color: #c1bfbf;
+  /* Can adjust if needed for light mode */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--primary-text);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Order Now Page Specific Styles */
+.order-now-main {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.order-now-header h1 {
+  font-size: 2.8em;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+.order-now-header p.subtitle {
+  font-size: 1.1em;
+  color: var(--text-primary);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.order-now-image-placeholder {
+  width: 100%;
+  max-width: 400px; /* Control image size */
+  height: 350px;
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  margin: 0 auto 40px auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.coming-soon-section {
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(12, 239, 61, 0.772) 0%,
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 70%, rgb(0, 255, 34) 0%, transparent 40%);
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: background-color 0.3s ease;
+}
+.coming-soon-section h2 {
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.coming-soon-section p {
+  font-size: 1.05em;
+  color: var(--text-primary);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  transition: color 0.3s ease;
+}
+
+.payment-info-section h3 {
+  font-size: 1.8em;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+.payment-info-section p {
+  font-size: 1em;
+  color: var(--text-primary);
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  transition: color 0.3s ease;
+}
+.payment-methods-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.payment-method-icon {
+  width: 80px;
+  height: 50px;
+  /* background-color: var(--bg-card); */
+  border: 1px solid var(--card-border-color);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  color: var(--text-primary);
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+body.light-mode .payment-method-icon {
+  background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  /* Breakpoint for hamburger */
+  v nav ul.active {
+    display: flex;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .order-now-header h1 {
+    font-size: 2.4em;
+  }
+  .coming-soon-section h2 {
+    font-size: 2.1em;
+  }
+  .payment-info-section h3 {
+    font-size: 1.6em;
+  }
+  .order-now-image-placeholder {
+    height: 200px;
+    max-width: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .order-now-header h1 {
+    font-size: 2em;
+  }
+  .coming-soon-section h2 {
+    font-size: 1.8em;
+  }
+  .payment-info-section h3 {
+    font-size: 1.4em;
+  }
+  .payment-method-icon {
+    width: 70px;
+    height: 45px;
+    font-size: 0.65em;
+  }
+}

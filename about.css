@@ -1,0 +1,264 @@
+:root {
+  /* Default to Dark Mode */
+  --primary-bg: #111111;
+  --primary-text: #ffffff;
+  --accent-color: #00c72b;
+  --secondary-bg: #3d19194f;
+  --card-bg: #222222;
+  --border-color: #444444;
+  --button-text-color: #1a1a1a;
+  --font-sans: "Arial", sans-serif;
+}
+
+body.light-mode {
+  --primary-bg: #d0f0c4e3;
+  --primary-text: #333333;
+  --accent-color: #266405;
+  --secondary-bg: #d0f0c4e3;
+  --card-bg: #ffffff;
+  --border-color: #c1bfbf;
+  --button-text-color: #ffffff;
+}
+
+/* the header will take style from home-page.css */
+/* About Page Specific Styles */
+.about-main {
+  padding: 0 0 60px 0;
+}
+
+.about-hero {
+  height: 60vh; /* Taller hero */
+  min-height: 400px;
+  background-color: #222; /* Placeholder for a stunning image */
+  /* background-image: url('your-stunning-restaurant-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--accent-color);
+  padding: 20px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.about-hero::before {
+  /* Darker overlay for text contrast */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+}
+.about-hero h1 {
+  font-family: var(--font-sans); /* More decorative for hero title */
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  color: var(--accent-color);
+}
+.about-hero p.subtitle {
+  font-size: 1.3em;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  color: rgba(245, 245, 245, 0.9);
+}
+
+.content-section-about {
+  padding: 0 0 50px 0;
+}
+.content-section-about h2 {
+  font-family: var(--font-sans);
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+.story-content {
+  column-count: 2; /* Create two columns for text */
+  column-gap: 40px;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+.story-content p {
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+.story-content strong {
+  color: var(--text-primary);
+  font-weight: bold;
+}
+body.light-mode .story-content strong {
+  color: #000;
+}
+
+.photo-showcase {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.photo-showcase h2 {
+  font-family: var(--font-sans);
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+.photo-grid-about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.photo-item-about .img-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 0.9em;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.photo-item-about .img-placeholder:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+.photo-item-about figcaption {
+  font-size: 0.9em;
+  color: var(--text-primary);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.mission-vision-section {
+  background-color: var(--bg-primary);
+  padding: 50px 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.mission-vision-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.statement-card {
+  flex-basis: calc(50% - 40px);
+  min-width: 300px;
+  padding: 30px;
+  background-color: var(--bg-primary); /* Contrast with section bg */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: background-color 0.3s ease;
+}
+.statement-card h3 {
+  font-family: var(--font-sans);
+  font-size: 2em;
+  color: var(--accent-color);
+  margin: 0 0 15px 0;
+  border-bottom: 1px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.statement-card p {
+  font-size: 1.1em;
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+footer {
+  background-color: var(--secondary-bg);
+
+  color: #aaaaaa;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsive  */
+@media (max-width: 900px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px; 
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-bg);
+    padding: 10px 0;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .story-content {
+    column-count: 1;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.8em;
+  }
+  .about-hero p.subtitle {
+    font-size: 1.1em;
+  }
+  .content-section-about h2,
+  .photo-showcase h2 {
+    font-size: 2.1em;
+  }
+  .mission-vision-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .statement-card {
+    flex-basis: 90%;
+    max-width: 500px;
+  }
+  .statement-card h3 {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  .about-hero h1 {
+    font-size: 2.2em;
+  }
+  .about-hero p.subtitle {
+    font-size: 1em;
+  }
+  .content-section-about h2,
+  .photo-showcase h2 {
+    font-size: 1.8em;
+  }
+  .statement-card h3 {
+    font-size: 1.6em;
+  }
+  .statement-card p {
+    font-size: 1em;
+  }
+}

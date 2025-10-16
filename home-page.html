@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="home-page.css" />
+    <link rel="stylesheet" href="kabul-location1.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="home-page.htm" class="logo-container">
+          <div class="logo-icon">
+            <img class="logo" src="images/Logo.png" alt="logo" />
+          </div>
+        </a>
+        <nav>
+          <div class="mobile-menu-icon" id="mobileMenuIcon">&#9776;</div>
+          <ul id="navLinks">
+            <li><a href="home-page.htm" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Locations</a>
+              <div class="dropdown-content">
+                <a href="kabul-location1.html">Shahr-e-Naw</a>
+                <a href="kabul-location2.html">Khair Khana</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Menus</a>
+              <div class="dropdown-content">
+                <a href="kabul-menu.html">Shahr-e-Naw</a>
+                <a href="heart-menu.html">Khair Khana</a>
+              </div>
+            </li>
+            <li><a href="group.html">Group Dining</a></li>
+            <li><a href="order.html">Order Now</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="nav-buttons">
+          <button
+            class="theme-toggle-btn"
+            id="themeToggleBtn"
+            aria-label="Toggle theme"
+          >
+            ☀️
+          </button>
+          <a href="logon.html" class="login-btn" id="loginBtn">
+            <!-- impotant -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Login
+          </a>
+        </div>
+      </div>
+      <button
+        class="hamburger-menu"
+        id="hamburger-menu"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      ></button>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="container">
+          <div class="hero-content">
+            <h1>
+              <span>THE BEST</span><span>QUALITY</span><span>THAT'S ALL!</span>
+            </h1>
+            <p>
+              Join us at Barg Continental for an unforgettable journey to
+              Afghanistan. Come, take a seat, and let us share with you the
+              heart of Afghanistan!
+            </p>
+            <a href="order.html" class="btn">Order Now</a>
+          </div>
+          <div class="hero-image">
+            <img
+              class="hero-image1"
+              id="hero-image1"
+              src="images/406534925_a887fc66-e48f-46e4-a641-e0568477b7e1.png"
+              alt="img"
+            />
+            <div class="scrool-info">
+              <span id="scroll-position"></span><br />
+              <span id="rotation-degrees"></span>
+            </div>
+            <img
+              class="hero-image2"
+              src="images/412272094_1ff7362d-341d-4a3c-83d5-dc1a9a67dd2b.png"
+              alt="pizza"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="locations">
+        <div class="container">
+          <h2>Here's where to find us...</h2>
+          <div class="options-container">
+            <img id="location_img" src="images/420235-PD9L3A-729.png" alt="" />
+            <div class="status" id="status"></div>
+            <div id="locations-kabul" class="option-card">
+              <h3>Shahr-e-Naw</h3>
+              <p>
+                Barg Continental, opposite to Park, Next to Qasre Bakhtawar,
+                Shahre Naw, Kabul
+              </p>
+              <p>Phone: +93 792 171 000</p>
+              <p>Open: 10:00 AM - 11:00 PM Daily</p>
+              <a href="kabul-location1.html" class="btn menu-details-btn"
+                >View Branch</a
+              >
+            </div>
+            <div id="locations-herat" class="option-card">
+              <h3>Khair Khana</h3>
+              <p>
+                Barg Continental, Next to Gift Center, Lese Mariam Street, Phase
+                2, Khair Khana, Kabul
+              </p>
+              <p>Phone: +93 799 308 989</p>
+              <p>Open: 11:00 AM - 10:00 PM Daily</p>
+              <a href="kabul-location2.html" class="btn menu-details-btn"
+                >View Branch
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menus">
+        <div class="container">
+          <h2>Our Menus</h2>
+          <div class="options-container">
+            <div id="menus-kabul" class="option-card">
+              <h3>Shahr-e-Naw</h3>
+              <p>Discover the rich flavors of our Shahr-e-Naw branch.</p>
+              <a href="kabul-menu.html" class="btn menu-details-btn"
+                >View branch Menu</a
+              >
+            </div>
+            <div id="menus-herat" class="option-card">
+              <h3>Khair Khana</h3>
+              <p>Explore the unique culinary delights at Khair Khana branch.</p>
+              <a href="heart-menu.html" class="btn menu-details-btn"
+                >View branch Menu</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="group-dining">
+        <div class="container">
+          <h2>Group Dining</h2>
+          <p class="p1">
+            Planning a special event or a get-together with a large group? BARG
+            CONTINENTAL offers tailored packages for group dining. Enjoy our
+            exquisite dishes in a comfortable setting, perfect for celebrations,
+            corporate events, or family gatherings. Contact us to discuss your
+            requirements and let us make your event memorable.
+          </p>
+          <div style="text-align: center">
+            <a href="info@bargcontinental.com" class="btn">Inquire Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <h2>About Us</h2>
+          <p style="text-align: center; max-width: 800px; margin: 0 auto">
+            At BARG CONTINENTAL, we believe that the best quality is everything.
+            Our journey began with a simple passion: to serve authentic,
+            delicious food crafted from the freshest, locally-sourced
+            ingredients. We are committed to providing an exceptional dining
+            experience where every dish tells a story of culinary tradition and
+            innovation. Our team of expert chefs pour their heart into creating
+            meals that delight the senses. Come, be a part of our story and
+            taste the difference that quality makes.
+          </p>
+          <div style="text-align: center; margin-top: 40px">
+            <a href="about.html" class="btn">read more</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <span id="currentYear"></span> BARG CONTINENTAL. All Rights
+          Reserved.
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">F</a>
+          <a href="#" aria-label="Instagram">I</a>
+          <a href="#" aria-label="Twitter">T</a>
+        </div>
+      </div>
+    </footer>
+    <script src="genral.js"></script>
+  </body>
+</html>

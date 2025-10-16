@@ -1,0 +1,357 @@
+:root {
+  /* Default to Dark Mode */
+  --bg-primary: #111111;
+  --bg-card: #222222;
+  --primary-text: #ffffff;
+  --accent-color: #00c72b;
+  --accent-color2: #00c72b2e;
+  --border-color: #444444;
+  --card-border-color: #444444;
+  --shadow-color: #1c1c1c;
+  --button-bg: var(--accent-color);
+  --button-hover-bg: #a0740a; /* Darker gold for hover */
+  --font-sans: "Arial", sans-serif;
+}
+
+body.light-mode {
+  --bg-primary: #d0f0c4e3;
+  --card-bg: #ffffff;
+  --primary-text: #111111;
+  --border-color: #c1bfbf;
+  --card-border-color: #c1bfbf;
+  --shadow-color: #c1bfbf;
+}
+
+/* the header will take style from home-page.css */
+/* Group Dining Page */
+.group-dining-main {
+  padding: 0 0 50px 0; 
+}
+
+.hero-group-dining {
+  height: 50vh; 
+  min-height: 350px;
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgb(12, 239, 61) 0%,
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 70%, rgb(0, 255, 34) 0%, transparent 40%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; 
+  padding: 20px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.hero-group-dining::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+body.light-mode .hero-group-dining::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-group-dining h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-group-dining p.subtitle {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.content-section {
+  padding: 40px 0;
+  text-align: center; 
+}
+.content-section h2 {
+  font-size: 2.2em;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-color);
+}
+.content-section .section-intro {
+  font-size: 1.05em;
+  color: var(--primary-text);
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.8;
+  text-align: left; 
+  transition: color 0.3s ease;
+}
+body.light-mode .content-section .section-intro {
+  text-align: center;
+} 
+
+.how-it-works-steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  text-align: left;
+}
+.step-card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  flex-basis: calc(33.333% - 30px); 
+  min-width: 280px; 
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.step-card:hover {
+  transform: translateY(-5px);
+}
+.step-card h3 {
+  font-size: 1.4em;
+  color: var(--accent-color);
+  margin: 0 0 10px 0;
+}
+.step-card p {
+  font-size: 0.95em;
+  color: var(--primary-text);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.event-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  text-align: left;
+}
+.event-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-left: 30px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px var(--accent-color2);
+}
+.event-image-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text);
+  font-size: 1em;
+  text-align: center;
+  border-bottom: 3px solid var(--accent-color);
+  transition: background-color 0.3s ease;
+}
+body.light-mode .event-image-placeholder {
+  background-color: #ddd;
+}
+.event-content {
+  padding: 20px;
+}
+.event-content h3 {
+  font-size: 1.5em;
+  color: var(--primary-text);
+  margin: 0 0 10px 0;
+  transition: color 0.3s ease;
+}
+.event-content p {
+  font-size: 0.9em;
+  color: var(--primary-text);
+  line-height: 1.6;
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+.booking-section {
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(12, 239, 61, 0.772) 0%,
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 70%, rgb(0, 255, 34) 0%, transparent 40%);
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+.booking-section h2 {
+  border-bottom-color: var(--accent-color);
+} 
+.booking-section p {
+  font-size: 1.1em;
+  color: var(--primary-text);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  transition: color 0.3s ease;
+}
+.booking-section strong {
+  color: var(--accent-color);
+}
+.contact-button {
+  display: inline-block;
+  color: var(--accent-color);
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: 2px solid var(--accent-color);
+  text-transform: uppercase;
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.contact-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-primary); 
+}
+body.light-mode .contact-button:hover {
+  color: var(--primary-text);
+}
+
+/* Responsive  */
+@media (max-width: 992px) {
+  .step-card {
+    flex-basis: calc(50% - 20px);
+  } 
+}
+@media (max-width: 900px) {
+  nav ul {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--secondary-bg);
+    position: absolute;
+    top: 65px; 
+    left: 0;
+    padding: 10px 0;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px;
+  }
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+  .dropdown .dropdown-content {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+  .dropdown .dropdown-content a {
+    padding: 8px 15px;
+  }
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    margin-left: -200px;
+  }
+  .nav-buttons {
+    margin-left: 10px;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+    width: 10px;
+    height: 20px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+  .logo-container .logo-expertise {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-group-dining h1 {
+    font-size: 2.5em;
+  }
+  .hero-group-dining p.subtitle {
+    font-size: 1.1em;
+  }
+  .content-section h2 {
+    font-size: 2em;
+  }
+  .section-intro {
+    font-size: 2em;
+    padding-left: 40px;
+    padding-left: 40px;
+  }
+  .how-it-works-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-card {
+    flex-basis: 80%;
+    max-width: 400px;
+  }
+  .event-types-grid {
+    grid-template-columns: 1fr;
+    width: 380px;
+    margin-left: 5px;
+    margin-right: 5px;
+  } /* Stack event cards */
+  .event-image-placeholder {
+    height: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-group-dining h1 {
+    font-size: 2em;
+  }
+  .hero-group-dining p.subtitle {
+    font-size: 1em;
+  }
+  .content-section h2 {
+    font-size: 1.7em;
+  }
+  .step-card h3 {
+    font-size: 1.2em;
+  }
+  .event-content h3 {
+    font-size: 1.3em;
+  }
+}

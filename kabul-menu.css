@@ -1,0 +1,232 @@
+:root {
+  /* Default to Dark Mode */
+  --primary-bg: #111111;
+  --bg-secondary: #1c1c1c;
+  --bg-card: #222222;
+  --primary-text: #ffffff;
+  --accent-color: #00c72b;
+  --accent-color2:#00c72b2e;
+  --border-color: #444444;
+  --shadow-color: #1c1c1c;
+  --font-sans: "Arial", sans-serif;
+}
+
+body.light-mode {
+  --bg-primary: #d0f0c4e3;
+  --bg-secondary: #f0f0f0;
+  --bg-card: #ffffff;
+  --text-primary: #111111;
+  --border-color: #c1bfbf;
+  --card-border-color: #c1bfbf;
+  --shadow-color: #c1bfbf;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.menu-page-main {
+  padding: 40px 0;
+}
+.menu-page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.menu-page-header h1 {
+  font-size: 2.8em;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+.menu-page-header p.subtitle {
+  font-size: 1.1em;
+  color: var(--primary-text);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.menu-section {
+  margin-bottom: 60px;
+}
+.menu-section-title {
+  font-size: 2.2em;
+  color: var(--accent-color);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+.menu-slider-container {
+  overflow-x: auto;
+  white-space: nowrap; 
+  padding: 10px 0 20px 0; 
+  -webkit-overflow-scrolling: touch; 
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--bg-secondary); 
+}
+.menu-slider-container::-webkit-scrollbar {
+  height: 8px;
+}
+.menu-slider-container::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+.menu-slider-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.menu-item-card {
+  display: inline-block; /* Layout items horizontally */
+  width: 300px; /* Fixed width for cards */
+  height: 400px;
+  border-radius: 12px;
+  margin-right: 25px;
+  margin-left: 10px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  overflow: hidden;
+  vertical-align: top; /* Align cards to the top */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+.menu-item-card:last-child {
+  margin-right: 10px;
+}
+.menu-item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px var(--accent-color2);
+}
+
+.menu-item-image-placeholder {
+  width: 100%;
+  height: 180px;
+  transition: background-color 0.3s ease;
+}
+.menu-item-image {
+  height: 180px ;
+  width: 299.9px;
+}
+body.light-mode .menu-item-image-placeholder {
+  background-color: #ddd;
+}
+
+.menu-item-content {
+  padding: 20px;
+
+}
+.menu-item-name {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+  transition: color 0.3s ease;
+}
+.menu-item-description {
+  font-size: 0.85em;
+  white-space: normal;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+  text-align: center;
+  min-height: 50px; /* Ensure consistent card height */
+  transition: color 0.3s ease;
+}
+.menu-item-price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-align: right;
+}
+
+footer {
+  footer {
+    background-color: var(--bg-primary);
+    color: #aaaaaa;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+  }
+  html.light-mode footer {
+    color: #777777;
+  }
+
+  footer p {
+    margin-bottom: 10px;
+  }
+
+  .social-icons a {
+    color: #aaaaaa;
+    margin: 0 10px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  html.light-mode .social-icons a {
+    color: #777777;
+  }
+
+  .social-icons a:hover {
+    color: var(--accent-color);
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .menu-page-header h1 {
+    font-size: 2.4em;
+  }
+  .menu-section-title {
+    font-size: 1.9em;
+    margin-left: 10px;
+  }
+  .menu-item-card {
+    width: 260px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .menu-item-image-placeholder {
+    height: 160px;
+  }
+}
+@media (max-width: 480px) {
+  .menu-page-header h1 {
+    font-size: 2em;
+  }
+  .menu-section-title {
+    font-size: 1.6em;
+  }
+  .menu-item-card {
+    width: 240px;
+    margin-right: 15px;
+  } /* Make cards slightly smaller */
+  .menu-item-image-placeholder {
+    height: 140px;
+  }
+  .menu-item-name {
+    font-size: 1.15em;
+  }
+  .menu-item-description {
+    font-size: 0.8em;
+    min-height: 40px;
+  }
+  .menu-item-price {
+    font-size: 1em;
+  }
+}
